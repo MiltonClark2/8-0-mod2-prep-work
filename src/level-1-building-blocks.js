@@ -22,7 +22,13 @@ const bandsData = require("../data/bands-data.js");
  * ]
  */
 
-function getAllBandNames() {}
+function getAllBandNames(bands) {
+  let bandNames = [];
+  for(let band of bands){
+    bandNames.push(band.bandName);
+  }
+  return bandNames;
+}
 
 /**
  *
@@ -36,9 +42,15 @@ function getAllBandNames() {}
  *
  * EXAMPLE: bandMembersTotal(bandsData);
  * > 62
- */
+ */ 
 
-function bandMembersTotal() {}
+function bandMembersTotal(bands) {
+  let totalMembers = 0;
+  for(let band of bands){
+    totalMembers += band.members.length;
+  }
+  return totalMembers;
+}
 
 /**
  *
